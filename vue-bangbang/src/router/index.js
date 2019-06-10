@@ -8,7 +8,6 @@ import PracticeProject from '@/pages/practice-project/PracticeProject'
 import EmploymentPattern from '@/pages/employment-pattern/EmploymentPattern'
 import CodeModules from '@/pages/code-modules/CodeModules'
 
-
 Vue.use(Router)
 
 export default new Router({
