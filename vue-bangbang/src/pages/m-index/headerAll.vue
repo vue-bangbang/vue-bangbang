@@ -2,7 +2,11 @@
   <div style="margin: 0 auto">
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
       <img src="../../assets/img/BBTlogo.jpg"/>
-      <el-menu-item v-for="(item,index) of navs" :key="index" :index="item.number + ''">{{item.name}}</el-menu-item>
+      <el-menu-item v-for="(item,index) of navs" :key="index" :index="item.number + ''">
+        <router-link :to="{path: item.path}">
+            {{item.name}}
+        </router-link>
+      </el-menu-item>
       <div class="el-logins">
         <i class="el-icon-user"></i>
       </div>
@@ -19,13 +23,13 @@ export default {
   data () {
     return {
       navs: [
-        {number: 1, name: '首页'},
-        {number: 2, name: '组队CP'},
-        {number: 3, name: '学习日记'},
-        {number: 4, name: '打卡记录'},
-        {number: 5, name: '练习项目'},
-        {number: 6, name: '就业模式'},
-        {number: 7, name: '代练模块'}
+        {number: 1, name: '首页', path: '/'},
+        {number: 2, name: '组队CP', path: '/CpGroup'},
+        {number: 3, name: '学习日记', path: '/LearningDiary'},
+        {number: 4, name: '打卡记录', path: '/ClockIn'},
+        {number: 5, name: '练习项目', path: '/PracticeProject'},
+        {number: 6, name: '就业模式', path: '/EmploymentPattern'},
+        {number: 7, name: '代练模块', path: '/CodeModules'}
       ],
       activeIndex: '1',
       activeIndex2: '1'
@@ -41,6 +45,9 @@ export default {
   .el-menu-demo{
     display: flex;
     justify-content: center;
+    a {
+      text-decoration: none;
+    }
     img {
       margin-right: 20px;
       width: 5%;
