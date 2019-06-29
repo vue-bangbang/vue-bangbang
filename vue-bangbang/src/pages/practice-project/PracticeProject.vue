@@ -1,6 +1,6 @@
 <template>
     <div>
-        PracticeProject
+        PracticeProject练习项目
     </div>
 </template>
 

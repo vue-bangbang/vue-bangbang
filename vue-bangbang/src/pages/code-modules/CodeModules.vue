@@ -1,6 +1,6 @@
 <template>
     <div>
-        CodeModules
+        CodeModules代练模块
     </div>
 </template>
 
